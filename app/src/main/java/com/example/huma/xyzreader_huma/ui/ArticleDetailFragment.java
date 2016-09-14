@@ -26,9 +26,9 @@ import android.widget.TextView;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.example.huma.xyzreader_huma.R;
+import com.example.huma.xyzreader_huma.data.ArticleLoader;
 import com.example.huma.xyzreader_huma.views.DrawInsetsFrameLayout;
 import com.example.huma.xyzreader_huma.views.ObservableScrollView;
-import com.example.huma.xyzreader_huma.data.ArticleLoader;
 
 /**
  * A fragment representing a single Article detail screen. This fragment is

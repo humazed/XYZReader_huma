@@ -1,5 +1,6 @@
 package com.example.huma.xyzreader_huma.ui;
 
+import android.app.ActivityOptions;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -14,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -129,6 +131,8 @@ public class ArticleListActivity extends AppCompatActivity implements
     }
 
     private class Adapter extends RecyclerView.Adapter<ViewHolder> {
+        private final String TAG = Adapter.class.getSimpleName();
+
         private Cursor mCursor;
 
         public Adapter(Cursor cursor) {
@@ -149,7 +153,11 @@ public class ArticleListActivity extends AppCompatActivity implements
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                                    ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))),
+                            ActivityOptions.
+                                    makeSceneTransitionAnimation(ArticleListActivity.this,
+                                            view, getResources().getString(R.string.img_transition_name)).toBundle());
+                    Log.d(TAG, "onClick " + getResources().getString(R.string.img_transition_name));
                 }
             });
             return vh;

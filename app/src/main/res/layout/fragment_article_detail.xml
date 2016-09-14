@@ -25,7 +25,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/cover_image"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:transitionName="@string/img_transition_name"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -87,7 +88,6 @@
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
                     android:textColorLink="@color/accent"
                     android:textSize="@dimen/detail_body_text_size"/>
-
             </com.example.huma.xyzreader_huma.views.MaxWidthLinearLayout>
         </FrameLayout>
     </com.example.huma.xyzreader_huma.views.ObservableScrollView>

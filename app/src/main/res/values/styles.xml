@@ -22,6 +22,17 @@
         <item name="colorPrimaryDark">@color/primary_dark</item> 
         <item name="colorControlHighlight">@color/accent_translucent</item> 
         <item name="colorAccent">@color/accent</item>
+
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.Home">
+        <item name="android:windowExitTransition">@transition/grid_exit</item>
+        <item name="android:windowReenterTransition">@transition/grid_reenter</item>
+    </style>
+
+    <style name="AppTheme.Details">
+        <item name="android:windowSharedElementEnterTransition">@transition/shared_photo</item>
     </style>
 
 </resources>

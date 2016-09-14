@@ -10,4 +10,6 @@
     <string name="up">Up</string>
     <string name="cover_image">cover image</string>
 
+    <string name="img_transition_name">img</string>
+
 </resources>
